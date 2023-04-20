@@ -81,6 +81,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./out
+          TOKEN_KEY: ${{ secrets.TOKEN_KEY }}
 
   # Deployment job
   deploy:
@@ -93,5 +94,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-    with: 
-      TOKEN_KEY: ${{ secrets.TOKEN_KEY }}
+      
