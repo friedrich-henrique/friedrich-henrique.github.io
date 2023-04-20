@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Leading from '@/components/Leading'
-const githubtoken = process.env.GITHUB_TOKEN_KEY
+const githubtoken = process.env.TOKEN_KEY
 const links = ['about', 'projects', 'resume', 'pics', 'contact']
 export default function Home() {
   console.log(links)
