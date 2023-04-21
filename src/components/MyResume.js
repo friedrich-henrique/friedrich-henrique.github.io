@@ -3,13 +3,16 @@ const ResumeSection = ({ title, experiences }) => {
         <div className="mb-8">
             <h2 className="text-2xl font-bold mb-2">{title}</h2>
             <ul>
-                {experiences.map((experience) => {
-                    <li className="bg-[#FF003C] rounded-lg shadow-md p-4 hover:shadow-lg my-5">
-                        <span>
+                {experiences.map((experience, index) => (
+                    <li key={index} className="bg-[#FF003C] rounded-lg shadow-md p-4 hover:shadow-lg my-5">
+                        <h3 className="font-semibold">
                             {experience.company}
+                        </h3>
+                        <span>
+                            {experience.role}, {experience.period}
                         </span>
                     </li>
-                })}
+                ))}
             </ul>
         </div>
     );
@@ -19,9 +22,8 @@ const Resume = ({ sections }) => {
     return (
         <div className="px-4">
             <h1 className="text-3xl font-bold mb-6">Resume</h1>
-            {sections.map((section) => (
-                <ResumeSection key={section.title} title={section.title} experiences={section.experiences}>
-                </ResumeSection>
+            {sections.map((section, index) => (
+                <ResumeSection key={index} title={section.title} experiences={section.experiences} />
             ))}
         </div>
     );
