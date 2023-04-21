@@ -1,22 +1,7 @@
 import Leading from '@/components/Leading'
 const links = ['about', 'projects', 'resume', 'pics', 'contact']
-import { Octokit, App } from "octokit";
-
-const octokit = new Octokit({
-  auth: process.env.TOKEN
-});
-
-function getIssues() {
-  octokit.request("GET /repos/{owner}/{repo}/issues", {
-    owner: "octocat",
-    repo: "Spoon-Knife",
-  }).then((response) => {
-    console.log(response.data);
-  });
-}
 
 export default function Home() {
-  getIssues()        
   return (
     <main className="flex min-h-screen flex-col items-center p-12 md:p-24 text-white">
       <div className='mb-8'>
