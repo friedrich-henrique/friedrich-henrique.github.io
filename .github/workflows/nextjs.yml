@@ -61,11 +61,6 @@ jobs:
           #
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
-      - name: Install dependencies
-        run: npm install octokit
-      - name: Run script
-        run: |
-          node .github/actions-scripts/use-the-api.mjs
         env:
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Restore cache
