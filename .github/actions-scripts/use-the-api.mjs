@@ -10,7 +10,10 @@ try {
       repo: "Spoon-Knife",
     });
 
-  const titleAndAuthor = result.data.map(issue => {title: issue.title, authorID: issue.user.id})
+  const titleAndAuthor = result.data.map(issue => {
+    title: issue.title; 
+    authorID: issue.user.id
+  })
 
   console.log(titleAndAuthor)
 
