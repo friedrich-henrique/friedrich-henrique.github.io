@@ -81,13 +81,15 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./out
-          TOKEN_KEY: ${{ secrets.TOKEN_KEY }}
+          
 
   # Deployment job
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+      with:
+        TOKEN: ${{ secrets.TOKEN }}
     runs-on: ubuntu-latest
     needs: build
     steps:
