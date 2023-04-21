@@ -1,8 +1,76 @@
+import ImageList from '@/components/ImageList';
 import Leading from '@/components/Leading'
-import { getRepositoryInfo } from '@/utils/github'
+import Projects from '@/components/Projects';
+import Resume from '@/components/MyResume';
+
 const links = ['about', 'projects', 'resume', 'pics', 'contact']
+const images = [
+  {
+    src: '/personal_images/dia_da_viagem.jpg',
+    alt: 'Farewell',
+    description: 'When I moved to Hungary',
+  },
+  {
+    src: '/personal_images/arte.jpg',
+    alt: 'Art collage',
+    description: 'Some arts I visited',
+  },
+  {
+    src: '/personal_images/aleatoria_paris.jpg',
+    alt: 'Paris',
+    description: 'When I finally visited Paris',
+  },
+  
+  {
+    src: '/personal_images/cafe_grecia.jpg',
+    alt: 'Coffee and sun',
+    description: 'Coffee and sun',
+  },
+  {
+    src: '/personal_images/cafe_moido.jpg',
+    alt: 'Coffee to be grinded',
+    description: "That's how I like it!",
+  },
+  
+  {
+    src: '/personal_images/duda_arvore.jpg',
+    alt: 'My dog',
+    description: 'My dog and a tree',
+  },
+  {
+    src: '/personal_images/duda_bandeira.jpg',
+    alt: 'My dog at the flag',
+    description: 'My dog and the Brazilian flag',
+  },
+  {
+    src: '/personal_images/familia_buda.jpg',
+    alt: 'Family', 
+    description: 'Family in Budapest',
+  },
+  {
+    src: '/personal_images/formado.jpg',
+    alt: 'Finally graduated',
+    description: 'Finally graduated',
+  },
+  {
+    src: '/personal_images/natal.jpg',
+    alt: 'Chirstmas',
+    description: 'We also celebrate Chirstmas',
+  },
+  {
+    src: '/personal_images/vo_colorada.jpg',
+    alt: 'Grandma',
+    description: 'Grandma colorada',
+  },
+  {
+    src: '/personal_images/paradise.jpg',
+    alt: 'Paradise',
+    description: 'Brazilian paradise',
+  },
+];
+
+
 export default function Home() {
-  console.log(getRepositoryInfo('octocat', 'Spoon-Knife'))
   return (
     <main className="flex min-h-screen flex-col items-center p-12 md:p-24 text-white">
       <div className='mb-8'>
@@ -22,7 +90,7 @@ export default function Home() {
         </ul>
       </div>
 
-      <div id='about' className='my-5'>
+      <div id='about' className='px-4 my-5'>
         <p className='leading-loose'>
           Hi! Thanks for visiting my personal website. My name is Henrique Friedrich, I am an engineer from Brazil who is very interested in learning new things.
           Besides technologies I can say I am passionate about football, history and music.
@@ -33,16 +101,16 @@ export default function Home() {
         </p>
       </div>
 
-      <div id='projects' className='my-5'>
-        projects here
+      <div id='projects' className='w-full my-5'>
+        <Projects/>
       </div>
 
-      <div id='resume' className='my-5'>
-        resume here
+      <div id='resume' className='w-full my-5'>
+        <Resume/>
       </div>
 
       <div id='pics' className='my-5'>
-        pics here
+        <ImageList images={images}></ImageList>
       </div>
 
       <div id='contact' className='flex justify-between w-1/2 my-5'>
