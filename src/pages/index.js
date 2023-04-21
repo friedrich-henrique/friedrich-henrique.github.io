@@ -1,7 +1,8 @@
 import Leading from '@/components/Leading'
+import { getRepositoryInfo } from '@/utils/github'
 const links = ['about', 'projects', 'resume', 'pics', 'contact']
-
 export default function Home() {
+  console.log(getRepositoryInfo('octocat', 'Spoon-Knife'))
   return (
     <main className="flex min-h-screen flex-col items-center p-12 md:p-24 text-white">
       <div className='mb-8'>
@@ -50,7 +51,7 @@ export default function Home() {
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
+                className="h-5 w-5"
                 fill="white"
                 viewBox="0 0 24 24">
                 <path
@@ -64,7 +65,7 @@ export default function Home() {
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
+                className="h-5 w-5"
                 fill="currentColor"
                 viewBox="0 0 24 24">
                 <path
@@ -78,7 +79,7 @@ export default function Home() {
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
+                className="h-5 w-5"
                 fill="currentColor"
                 viewBox="0 0 24 24">
                 <path
@@ -92,7 +93,7 @@ export default function Home() {
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
+                className="h-5 w-5"
                 fill="currentColor"
                 viewBox="0 0 24 24">
                 <path
