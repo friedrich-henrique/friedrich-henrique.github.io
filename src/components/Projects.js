@@ -4,14 +4,13 @@ import { useEffect, useState } from "react"
 export default function Projects() {
     const [repositories, setRepositories] = useState([]);
     const icons = {
-        PHP: <i class="devicon-php-plain"></i>,
-        JavaScript: <i class="devicon-javascript-plain"></i>,
-        Python: <i class="devicon-python-plain"></i>,
+        PHP: <i className="devicon-php-plain"></i>,
+        JavaScript: <i className="devicon-javascript-plain"></i>,
+        Python: <i className="devicon-python-plain"></i>,
     }
     useEffect(() => {
         getRepos("friedrich-henrique")
             .then((repos) => {
-                console.log(repos)
                 setRepositories(repos);
             })
             .catch((error) => {
