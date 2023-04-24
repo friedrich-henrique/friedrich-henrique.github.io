@@ -20,7 +20,7 @@ const images = [
     alt: 'Paris',
     description: 'When I finally visited Paris',
   },
-  
+
   {
     src: '/personal_images/cafe_grecia.jpg',
     alt: 'Coffee and sun',
@@ -31,7 +31,7 @@ const images = [
     alt: 'Coffee to be grinded',
     description: "That's how I like it!",
   },
-  
+
   {
     src: '/personal_images/duda_arvore.jpg',
     alt: 'My dog',
@@ -44,7 +44,7 @@ const images = [
   },
   {
     src: '/personal_images/familia_buda.jpg',
-    alt: 'Family', 
+    alt: 'Family',
     description: 'Family in Budapest',
   },
   {
@@ -92,21 +92,22 @@ export default function Home() {
 
       <div id='about' className='px-4 my-5'>
         <p className='leading-loose'>
-          Hi! Thanks for visiting my personal website. My name is Henrique Friedrich, I am an engineer from Brazil who is very interested in learning new things.
-          Besides technologies I can say I am passionate about football, history and music.
+          Hi! Thanks for visiting my personal website!
+          My name is Henrique Friedrich, I am an engineer from Brazil, currently living in Budapest, who is very interested in learning new things.
+          Besides technology, I can say I am passionate about football, chess, history, and music.
         </p>
         <p className='leading-loose'>
-          I am currently working as a software developer at a company called Logpiper.
+          Currently, I am working in an e-logistics startup company co-founded by me. It has been a great learning period in several areas, from programming to business processes to sales.
           I am always looking for new opportunities to learn and grow as a developer. If you have any questions or if you want to collaborate with me, feel free to contact me.
         </p>
       </div>
 
       <div id='projects' className='w-full my-5'>
-        <Projects/>
+        <Projects />
       </div>
 
       <div id='resume' className='w-full my-5'>
-        <Resume/>
+        <Resume />
       </div>
 
       <div id='pics' className='my-5'>
