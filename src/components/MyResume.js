@@ -36,13 +36,6 @@ const ExperienceSection = ({ experience }) => {
                     }
                 </div>
             </div>
-
-
-
-
-
-
-
         </li>
     )
 }
@@ -52,7 +45,7 @@ const ResumeSection = ({ title, experiences }) => {
     return (
         <div className="mb-8">
             <h2 className="text-2xl font-bold mb-2">{title}</h2>
-            <ol class="relative">
+            <ol className="relative">
                 {experiences.map((experience, index) => (
                     <ExperienceSection key={index} experience={experience} />
                 ))}
