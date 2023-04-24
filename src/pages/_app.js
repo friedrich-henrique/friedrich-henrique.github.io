@@ -1,15 +1,7 @@
 import '@/styles/globals.css'
-import '../styles/spinner.css'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-
-const LoadingSpinner = () => {
-  return (
-    <div className="simple-spinner">
-      <span></span>
-    </div>
-  )
-}
+import Loading from './loading'
 
 export default function App({ Component, pageProps }) {
   const router = useRouter()
@@ -31,7 +23,7 @@ export default function App({ Component, pageProps }) {
     <>
       {
         loading
-          ? <LoadingSpinner />
+          ? <Loading />
           : <Component {...pageProps} />
       }
     </>

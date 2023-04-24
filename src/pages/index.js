@@ -2,6 +2,8 @@ import ImageList from '@/components/ImageList';
 import Leading from '@/components/Leading'
 import Projects from '@/components/Projects';
 import Resume from '@/components/MyResume';
+import { Suspense } from 'react';
+import Loading from './loading';
 
 const links = ['about', 'projects', 'resume', 'pics', 'contact']
 const images = [
@@ -111,7 +113,9 @@ export default function Home() {
       </div>
 
       <div id='pics' className='my-5'>
-        <ImageList images={images}></ImageList>
+        <Suspense fallback={<Loading/>}>
+          <ImageList images={images}></ImageList>
+        </Suspense>
       </div>
 
       <div id='contact' className='flex justify-between w-1/2 my-5'>
